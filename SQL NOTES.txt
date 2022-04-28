@@ -1,0 +1,114 @@
+//span[text()='NSE ']//parent::span//preceding-sibling::span//span
+
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+https://www.guru99.com/keyboard-mouse-events-files-webdriver.html
+https://www.toolsqa.com/testng/retry-failed-tests-testng/
+
+
+
+
+
+-----CREATE DATABASE SYNTAX-----
+CREATE DATABASE(DATABASE_NAME)
+
+
+-----CREATE TABLE SYNTAX-----
+  NOTE:- Numeric datatype size is no mentioned
+
+  CREATE TABLE table_name(column1_name data type(size),column2_name data type(size),
+  column3_name data type(size))
+
+EXAMPLE=CREATE TABLE Student(name CHAR(55),city char(24),state char(34),mobile_no BIGINT,date VARCHAR(24))
+
+
+-----ALTER TABLE SYNTAX-------
+  Alter command are used to modify the data in table/structure
+ 1 . ALTER TABLE table_name
+     ADD COLUMN COLUMN_NAME DATA TYPE(SIZE)
+EXAMPLE:- ALTER TABLE Student
+          ADD Attribute CHAR(55)
+2.  ALTER TABLE TABLE_NAME
+    DROP COLUMN COLUMN_NAME 
+EXAMPLE:- ALTER TABLE Student
+          DROP column Attribute
+3.  ALTER TABLE TABLE_NAME
+    ALTER COLUMN COLUMN_NAME
+EXAMPLE:- ALTER TABLE college
+          ALTER COLUMN roll_no int(55)
+
+----TRUNCANTE--- 
+-DELETE ALL DATA IN THE TABLE
+SYNTAX
+ TRUNCATE TABLE TABLE_NAME
+
+SELECT SYNTAX----
+   SELECT COLUMN1,COLUMN2,....COLUMNN FROM TABLE_NAME
+  SELECT *FROM TABLE_NAME
+
+insert into [dbo].[STUDENT_INFO]([ROLL_NO], [student_name], [CITY], [STATE])
+values(12,'pooja','PUNE','MAHARASHTRA')
+SELECT*FROM STUDENT_INFO
+INSERT INTO [dbo].[STUDENT_INFO]([ROLL_NO], [student_name], [CITY], [STATE], [conact_name],
+[ADMISSION_DATE], [MESSAGE])
+VALUES(20,'PRATI','PABAL','MAHARASHTRA','9623504739','2021-08-17','FRIENDS')
+
+IF YOU WANT TO ADD MULTIPLE ROW IN SAME TABLE THEN SYNTAX IS:-
+INSERT INTO [dbo].[STUDENT_INFO]([ROLL_NO], [student_name], [CITY], [STATE], [conact_name],
+[ADMISSION_DATE], [MESSAGE])
+VALUES(20,'PRATI','PABAL','MAHARASHTRA','9623504739','2021-08-17','FRIENDS'),
+VALUES(20,'PAYAL','PUNE','MAHARASHTRA','9860461928','2021-08-18','FRIENDS FOREVER')
+
+note:-
+when you not insert in anything into one of column then this shown null value
+1-avoid duplicate value
+2.avoid null
+3.unique value
+
+
+SELECT*INTO [dbo].[STUDENT_INFO_BKP]
+FROM [dbo].[STUDENT_INFO]
+
+if you want to add data from one table to another table then use following synax:-
+
+INSERT INTO STUDENT_INFO
+SELECT *FROM STUDENT_INFO_BKP
+
+SELECT*FROM [dbo].[STUDENT_INFO]
+TRUNCATE TABLE [dbo].[STUDENT_INFO]
+
+
+SELECT DISTINCT COLUMN_NAME FROM TABLE_NAME
+
+
+
+----- INSERT INTO-----
+INSERT INTO TABLE_NAME(COLUMN_NAME1,COLUMN_NAME2......COLUMN_NAMEN)
+VALUES(VALUE1,VALUE2.....VALUEN)
+
+numeric type --->101
+string type/date-----> "   ---> compulsory
+
+NOT NULL CONSTRAINTS
+ TWO WAYS  example
+1.
+CREATE TABLE TABLE_NAME(COLUMN_NAME1 DATA_TYPE(SIZE) NOT NULL,COLUMN_NAME2 DATA_TYPE(SIZE)
+2.
+ALTER TABLE table_name
+ALTER column_name data_type(size)not null
+
+
+UNIQUE CONSTRAINTS
+IN THIS CONSTRAINTS duplicate values is not allowed in table but null values are accepted
+WE CAN apply single unique key for multiple columns.
+we can apply single unique key for a table.
+
+ 
+
+example
+
+PRIMARY KEY
+AVOID NULL&DUPLICATE VALUES.
+There is a single primary key we can apply in a table.(single,combination)
+
+CREATE TABLE student() roll_no int primary key,stud_name char(55))
